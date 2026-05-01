@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato — PromoBot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #EFF6FF; --bg2: #DBEAFE; --bg3: #FFFFFF;
+    --cream: #172554; --cream-muted: #3B5EA6;
+    --gold: #1E40AF; --gold-light: #3B82F6;
+    --border: rgba(30,64,175,0.15); --radius: 4px;
+  }
+  body {
+    background: var(--bg); color: var(--cream);
+    font-family: 'DM Sans', sans-serif; font-weight: 400;
+    font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(239,246,255,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border); padding: 0 5vw;
+    display: flex; align-items: center; justify-content: space-between; height: 64px;
+  }
+  .logo { font-family: 'Cormorant Garant', serif; font-size: 28px; font-weight: 600; color: var(--cream); text-decoration: none; }
+  nav a.back { color: var(--cream-muted); text-decoration: none; font-size: 14px; }
+  nav a.back:hover { color: var(--cream); }
+
+  .page-hero { padding: 5rem 5vw 3rem; border-bottom: 1px solid var(--border); }
+  .page-tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 1rem; display: block; }
+  .page-title { font-family: 'Cormorant Garant', serif; font-size: 3rem; font-weight: 600; letter-spacing: -1px; line-height: 1.05; }
+  .page-sub { margin-top: 1rem; font-size: 16px; color: var(--cream-muted); font-weight: 300; max-width: 480px; }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 5vw;
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .content { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  .form-group { margin-bottom: 1.5rem; }
+  label { display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cream-muted); font-weight: 500; margin-bottom: 0.5rem; }
+  input, select, textarea {
+    width: 100%; background: var(--bg2); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 12px 16px;
+    color: var(--cream); font-family: 'DM Sans', sans-serif;
+    font-size: 15px; font-weight: 300; outline: none;
+    transition: border-color 0.2s;
+  }
+  input:focus, textarea:focus, select:focus { border-color: var(--gold); }
+  input::placeholder, textarea::placeholder { color: var(--cream-muted); }
+  textarea { resize: vertical; min-height: 140px; }
+  select option { background: var(--bg2); }
+
+  .btn-submit {
+    width: 100%; background: var(--gold); border: none;
+    color: var(--bg); padding: 14px; border-radius: var(--radius);
+    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
+    cursor: pointer; transition: background 0.2s; letter-spacing: 0.5px;
+  }
+  .btn-submit:hover { background: var(--gold-light); }
+
+  .info-block { margin-bottom: 3rem; }
+  .info-block h3 { font-family: 'Cormorant Garant', serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--cream); }
+  .info-block p { font-size: 14px; color: var(--cream-muted); font-weight: 300; line-height: 1.65; }
+  .info-block a { color: var(--gold); text-decoration: none; }
+  .info-block a:hover { color: var(--gold-light); }
+  .info-block .divider { width: 30px; height: 1px; background: var(--gold); margin: 1.25rem 0; }
+
+  footer {
+    border-top: 1px solid var(--border); padding: 2rem 5vw;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  footer p { font-size: 12px; color: var(--cream-muted); font-weight: 300; }
+  footer a { color: var(--cream-muted); text-decoration: none; font-size: 12px; }
+  footer a:hover { color: var(--cream); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">PromoBot</a>
+  <a href="index.html" class="back">← Voltar ao site</a>
+</nav>
+
+<div class="page-hero">
+  <span class="page-tag">Fale conosco</span>
+  <h1 class="page-title">Contato</h1>
+  <p class="page-sub">Dúvidas, sugestões de oferta, parcerias ou questões sobre privacidade — estamos aqui.</p>
+</div>
+
+<div class="content">
+
+  <div>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" placeholder="Seu nome completo">
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="seu@email.com">
+    </div>
+    <div class="form-group">
+      <label for="assunto">Assunto</label>
+      <select id="assunto">
+        <option value="" disabled selected>Selecione o assunto</option>
+        <option value="sugestao">Sugestão de oferta</option>
+        <option value="parceria">Proposta de parceria</option>
+        <option value="duvida">Dúvida geral</option>
+        <option value="lgpd">LGPD / Privacidade</option>
+        <option value="erro">Oferta com erro ou expirada</option>
+        <option value="outro">Outro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" placeholder="Descreva sua mensagem aqui..."></textarea>
+    </div>
+    <button class="btn-submit" type="button">Enviar mensagem →</button>
+  </div>
+
+  <div>
+    <div class="info-block">
+      <h3>E-mail direto</h3>
+      <div class="divider"></div>
+      <p>Para assuntos que exigem resposta mais rápida:</p>
+      <p style="margin-top: 0.5rem;"><a href="mailto:contato@promobot.ia.br">contato@promobot.ia.br</a></p>
+    </div>
+    <div class="info-block">
+      <h3>Canal no Telegram</h3>
+      <div class="divider"></div>
+      <p>Acompanhe as ofertas em tempo real pelo nosso canal:</p>
+      <p style="margin-top: 0.5rem;"><a href="https://t.me/eveseeksapple" target="_blank">@eveseeksapple no Telegram →</a></p>
+    </div>
+    <div class="info-block">
+      <h3>Ofertas expiradas</h3>
+      <div class="divider"></div>
+      <p>Encontrou uma oferta que não está mais válida? Nos avise pelo formulário ao lado — atualizamos o mais rápido possível.</p>
+    </div>
+    <div class="info-block">
+      <h3>Parcerias</h3>
+      <div class="divider"></div>
+      <p>Lojas e marcas interessadas em divulgação podem nos contatar pelo e-mail acima. Analisamos todas as propostas, mas priorizamos ofertas que se encaixam nos nossos critérios de curadoria.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 PromoBot · promobot.ia.br · Todos os direitos reservados.</p>
+  <div style="display: flex; gap: 1.5rem;">
+    <a href="index.html">Início</a>
+    <a href="politica-de-privacidade.html">Privacidade</a>
+  </div>
+</footer>
+
+</body>
+</html>
