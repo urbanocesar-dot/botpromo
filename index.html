@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BotPromo — Promoções que realmente valem</title>
+<link rel="icon" type="image/png" href="icon.png">
 <meta name="description" content="Bot inteligente de curadoria de promoções, cupons e ofertas verificadas. Só entra o que realmente vale a pena.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -694,6 +695,11 @@
   /* RESPONSIVE */
   @media (max-width: 768px) {
 
+    /* HERO MASCOTE MOBILE */
+    .hero-layout { flex-direction: column-reverse; gap: 1.5rem; }
+    .hero-mascot { width: 220px; }
+    .hero-inner { max-width: 100%; }
+
     /* NAV */
     nav ul { display: none; }
     nav { padding: 0 4vw; }
@@ -757,6 +763,41 @@
     .hero-stats { flex-direction: column; gap: 1rem; }
   }
 
+  /* HERO LAYOUT */
+  .hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .hero-inner {
+    flex: 1;
+    max-width: 620px;
+  }
+
+  .hero-mascot {
+    flex-shrink: 0;
+    width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .hero-mascot img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(30,64,175,0.15));
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+
   /* DIVIDER */
   .divider {
     width: 40px;
@@ -789,29 +830,34 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <span class="hero-tag">Bot inteligente de promoções</span>
-    <h1>O bot que só<br>te manda o que <em>vale</em>.</h1>
-    <p class="hero-sub">
-      O BotPromo monitora dezenas de canais 24h por dia, verifica o histórico de preços e entrega apenas as ofertas com economia real — direto no seu Telegram.
-    </p>
-    <div class="hero-actions">
-      <a href="#ofertas" class="btn-primary">Ver ofertas de hoje</a>
-      <a href="https://t.me/eveseeksapple" class="btn-ghost" target="_blank">Receber alertas no Telegram →</a>
+  <div class="hero-layout">
+    <div class="hero-inner">
+      <span class="hero-tag">Bot inteligente de promoções</span>
+      <h1>O bot que só<br>te manda o que <em>vale</em>.</h1>
+      <p class="hero-sub">
+        O BotPromo monitora dezenas de canais 24h por dia, verifica o histórico de preços e entrega apenas as ofertas com economia real — direto no seu Telegram.
+      </p>
+      <div class="hero-actions">
+        <a href="#ofertas" class="btn-primary">Ver ofertas de hoje</a>
+        <a href="https://t.me/eveseeksapple" class="btn-ghost" target="_blank">Receber alertas no Telegram →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">14</div>
+          <div class="stat-label">canais monitorados</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24h</div>
+          <div class="stat-label">monitoramento contínuo</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">300+</div>
+          <div class="stat-label">lojas parceiras</div>
+        </div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">14</div>
-        <div class="stat-label">canais monitorados</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">24h</div>
-        <div class="stat-label">monitoramento contínuo</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">300+</div>
-        <div class="stat-label">lojas parceiras</div>
-      </div>
+    <div class="hero-mascot">
+      <img src="mascote2.png" alt="BotPromo mascote" />
     </div>
   </div>
 </section>
